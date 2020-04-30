@@ -270,7 +270,7 @@ public class Human : MonoBehaviour
         }
         else //if not infected
         {
-            increaseHunger(defaultHunger * Time.deltaTime * 2.5f);
+            increaseHunger(defaultHunger * Time.deltaTime * .25f);
             if (getHunger() <= 0)
             {
                 decreaseImmuneSystem(infectedImmune * Time.deltaTime);

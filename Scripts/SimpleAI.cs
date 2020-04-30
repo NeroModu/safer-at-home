@@ -59,7 +59,6 @@ public class SimpleAI : Human {
         int run = coord.getY();
         int x = 5 + (10 * run);
         int y = 195 - (10 * rise);
-
         return new Vector3(x, 1.4f, y);
     }
 
@@ -71,11 +70,8 @@ public class SimpleAI : Human {
         currentGoal = pathToNewPos[index];
         if(this.transform.position == decodeCoord(currentGoal)){
 
-            //"popping" the first element in the array. creates a new array without the first element 
+            currentGoal = pathToNewPos[index+1];    
 
-            currentGoal = pathToNewPos[index+1];
-
-            
             index++;
         }
         float step = base.speed * Time.deltaTime;
@@ -102,11 +98,9 @@ public class SimpleAI : Human {
             Debug.Log(vec.x + " " + vec.y);
             coords.Add(new coordinate((int)vec.y, (int)vec.x));
         }
-
         index = 0;
         targetPath = coords.ToArray();
     }
-    
     new void Start() {
         
         hospital1 = GameObject.Find("hospital1");
@@ -119,15 +113,13 @@ public class SimpleAI : Human {
         //randomly infect
         infect();
     }
-
     // Update is called once per frame
     new void Update() {
         base.Update(); // Do human things
-        Debug.Log("updating");
+        
         if (isHome) { // Case 1. NPC is currently at home
             Debug.Log("Home");
             if (getCash() > 300) { // Only leave the house if npc can afford it
-                Debug.Log("cash gang");
                 if (getImmuneSystem() < 40) { // If health gets critical, go to hospital
                     Debug.Log("Immune'nt");
                     isHome = false; // NPC is no longer home
@@ -155,10 +147,7 @@ public class SimpleAI : Human {
 
                     // targetPath = Pathfinder.aStar(getCoord(this.transform.position), target);
                     // Debug.Log(targetPath);
-
                 }
-
-
             }
         }
 
@@ -177,17 +166,11 @@ public class SimpleAI : Human {
 
                 }
                 
-                
-
             }
 
             else this.move(target, targetPath); // Case 3. NPC is mid route. Inch NPC a tiny bit closer towards target
 
-            
-
         }
-         
-
     }
 
     private void OnCollisionEnter(Collision other) {
@@ -200,8 +183,7 @@ public class SimpleAI : Human {
                 // setTarget(target);
                 // isMoving = true;
                 isMoving = false;
-                Debug.Log("touch");
-
+  
                 if (Random.Range(0, 10) >= 7) {
                     if (Random.Range(0, 10) >= 5) {
                         target = getCoord(hospital1.transform.position);
@@ -223,32 +205,6 @@ public class SimpleAI : Human {
                 setTarget(target);
                 isMoving = false;
             }
-
-            //check for collision with home
-            // if (other.gameObject.name == ("house" + getHouseID().ToString())) {
-
-            //     if (Random.Range(0, 10) >= 7) {
-            //         if (Random.Range(0, 10) >= 5) {
-            //             target = getCoord(hospital1.transform.position);
-            //         }
-
-            //         else target = getCoord(hospital2.transform.position);
-            //     }
-
-            //     else {
-                    
-            //         if (Random.Range(0, 10) >= 5) {
-            //             target = getCoord(grocery_store.transform.position);
-            //         }
-
-            //         else target = getCoord(work.transform.position);
-
-            //     }
-
-            //     setTarget(target);
-            //     isMoving = true;
-            //     isHome = true;
-            // }
 
         }
     }
@@ -273,19 +229,3 @@ public class coordinate {
     }
 
 }
-
-/*
-
-    JUNCTION ID CHART (DEFUNCT)
-
-    "Junction1" = ╋     "Junction6" = ┗
-
-    "Junction2" = ┳     "Junction7" = ┏
-
-    "Junction3" = ┣     "Junction8" = ┛
-
-    "Junction4" = ┻     "Junction9" = ┓
-
-    "Junction5" = ┫
-
-    */
