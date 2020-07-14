@@ -1,6 +1,6 @@
 
 # SAFER AT HOME
-A collaborative project and finalist in Google's HackDSC 2020 Hackathon.
+NeroModu's entry to Google's HackDSC 2020 Hackathon.
 
 ## Abstract
 A game made in unity where the challenge is to survive as long as you can without catching the Coronavirus, where you must balance staying at home to avoid other people, with going out to acquire necessary food and health supplies.
