@@ -7,8 +7,11 @@ A game made in unity where the challenge is to survive as long as you can withou
 
 [![YOUTUBE DEMO VIDEO](https://i.imgur.com/XmHDjGU.png)](https://www.youtube.com/watch?v=sJjylOtMkVE)
 
-
-[![LINK TO DEVPOST SUBMISSION](https://marketing-challengepost.netdna-ssl.com/assets/reimagine2/devpost-logo-f9249efcf3c5cb05b96b64c292f54734.svg)](https://devpost.com/software/safer-at-home)
+<p align="center">
+  <a href="https://devpost.com/software/safer-at-home">
+    <img src="https://marketing-challengepost.netdna-ssl.com/assets/reimagine2/devpost-logo-f9249efcf3c5cb05b96b64c292f54734.svg" alt="Link to submission" width="320" height="160">
+  </a>
+</p>
 
 ## Inspiration
 Made during the mandatory stay-at-home order imposed to fight COVID-19, our inspiration was all around us. Going outside seems scary, yet food is essential. And when you're outside, avoiding people is a must when anyone could be infected.
