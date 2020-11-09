@@ -37,6 +37,10 @@ Out of 50 submissions, we are proud to announce that Safer At Home received **2<
 <a href="https://devpost.com/daryoush-ghoreishi">
 	<img alt="Devpost" src="https://cdn.iconscout.com/icon/free/png-512/dev-post-555431.png" width="30" height="30">
 </a>
+<br>
+<a href="https://github.com/dghoreis">
+	<img alt="Github" src="https://image.flaticon.com/icons/svg/25/25231.svg" width="28" height="28">
+</a>
 
 ### Ezra Moussa
 <a href="https://www.linkedin.com/in/ezramoussa/">
